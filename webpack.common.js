@@ -1,5 +1,6 @@
 const path=require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports={
     entry:'./src/index.js',
     output:{
@@ -7,22 +8,33 @@ module.exports={
         filename:'app.js'
     },
       plugins: [
-
+new CopyPlugin({
+      patterns: [
+        { from: "./public/img", to: "img" },
+        
+      ],
+    }),
       new HtmlWebpackPlugin({
           title:'Webpack Tailwind Template',
           filename:'index.html',
-          template:'public/index.html'
+          template:'public/index.html',
+          minify:false
       }),
       new HtmlWebpackPlugin({
           title:'Webpack Tailwind Template',
           filename:'dashboard.html',
-          template:'public/dashboard.html'
+          template:'public/dashboard.html',
+          minify:false
       }),
   require('tailwindcss'),
     require('autoprefixer'),
       ],
         module: {
         rules: [
+          
+      
+  
+         
             {
                 test: /\.css$/,
                 use: [
@@ -32,6 +44,7 @@ module.exports={
                     {
                         loader: "css-loader"
                     },
+
 
 
                      {
@@ -48,7 +61,13 @@ module.exports={
           },
                 ],
 
+
             },
+
+              {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
 
         ]
     }
