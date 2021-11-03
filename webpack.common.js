@@ -73,7 +73,13 @@ new CopyPlugin({
           filename:'create-suppliers.html',
           template:'public/create-suppliers.html',
           minify:false
-      }),        
+      }),
+       new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'sales.html',
+          template:'public/sales.html',
+          minify:false
+      }),            
   require('tailwindcss'),
     require('autoprefixer'),
       ],
