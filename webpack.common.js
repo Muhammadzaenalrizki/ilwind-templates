@@ -26,6 +26,54 @@ new CopyPlugin({
           template:'public/dashboard.html',
           minify:false
       }),
+      new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'form.html',
+          template:'public/form.html',
+          minify:false
+      }),
+       new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'form-customer.html',
+          template:'public/form.html',
+          minify:false
+      }),
+          new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'items.html',
+          template:'public/items.html',
+          minify:false
+      }),
+              new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'create-products.html',
+          template:'public/create-products.html',
+          minify:false
+      }),
+                 new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'create-sub-products.html',
+          template:'public/create-sub-products.html',
+          minify:false
+      }),
+              new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'create-stock-product.html',
+          template:'public/create-stock-product.html',
+          minify:false
+      }), 
+          new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'suppliers.html',
+          template:'public/suppliers.html',
+          minify:false
+      }),  
+          new HtmlWebpackPlugin({
+          title:'Webpack Tailwind Template',
+          filename:'create-suppliers.html',
+          template:'public/create-suppliers.html',
+          minify:false
+      }),        
   require('tailwindcss'),
     require('autoprefixer'),
       ],

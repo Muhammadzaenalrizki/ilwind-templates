@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>index</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+            integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+                  <style>
+        
+        /*Overrides for Tailwind CSS */
+        
+        /*Form fields*/
+        .dataTables_wrapper select,
+        .dataTables_wrapper .dataTables_filter input {
+            color: #4a5568;             /*text-gray-700*/
+            padding-left: 1rem;         /*pl-4*/
+            padding-right: 1rem;        /*pl-4*/
+            padding-top: .5rem;         /*pl-2*/
+            padding-bottom: .5rem;      /*pl-2*/
+            line-height: 1.25;          /*leading-tight*/
+            border-width: 2px;          /*border-2*/
+            border-radius: .25rem;      
+            border-color: #edf2f7;      /*border-gray-200*/
+            background-color: #edf2f7;  /*bg-gray-200*/
+        }
+
+        /*Row Hover*/
+        table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+            background-color: #ebf4ff;  /*bg-indigo-100*/
+        }
+        
+        /*Pagination Buttons*/
+        .dataTables_wrapper .dataTables_paginate .paginate_button       {
+            font-weight: 700;               /*font-bold*/
+            border-radius: .25rem;          /*rounded*/
+            border: 1px solid transparent;  /*border border-transparent*/
+        }
+        
+        /*Pagination Buttons - Current selected */
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current   {
+            color: #fff !important;             /*text-white*/
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);    /*shadow*/
+            font-weight: 700;                   /*font-bold*/
+            border-radius: .25rem;              /*rounded*/
+            background: #667eea !important;     /*bg-indigo-500*/
+            border: 1px solid transparent;      /*border border-transparent*/
+        }
+
+        /*Pagination Buttons - Hover */
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover     {
+            color: #fff !important;             /*text-white*/
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);     /*shadow*/
+            font-weight: 700;                   /*font-bold*/
+            border-radius: .25rem;              /*rounded*/
+            background: #667eea !important;     /*bg-indigo-500*/
+            border: 1px solid transparent;      /*border border-transparent*/
+        }
+        
+        /*Add padding to bottom border */
+        table.dataTable.no-footer {
+            border-bottom: 1px solid #e2e8f0;   /*border-b-1 border-gray-300*/
+            margin-top: 0.75em;
+            margin-bottom: 0.75em;
+        }
+        
+        /*Change colour of responsive icon*/
+        table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+            background-color: #667eea !important; /*bg-indigo-500*/
+        }
+        
+      </style>
+      
+    <script defer src="app.js"></script></head>
+    <body class="bg-gray-100">
+        <!-- header -->
+        <header class="flex flex-row w-full lg:px-10">
+            <div class="w-1/2">
+                <img src="img/logo.png" alt="" />
+            </div>
+            <div class="w-1/2 flex justify-end items-center">
+                <h6><b>Hello,</b>Zaenal</h6>
+            </div>
+        </header>
+        <!-- end header -->
+        <!-- navbar -->
+
+        <div
+            class="inline sm:inline md:inline lg:hidden xl:hidden px-3"
+            id="hamburger"
+        >
+            <i class="fas fa-bars text-3xl"></i>
+        </div>
+        <nav
+            class="
+                bg-white
+                shadow-sm
+                lg:px-24
+                py-1
+                flex
+                hidden
+                sm:hidden
+                md:hidden
+                lg:block
+                xl:block
+                z-999
+            "
+            id="navbar"
+        >
+            <ul
+                class="
+                    flex flex-column
+                    sm:flex-column
+                    md:flex-column
+                    lg:flex-row
+                    flex-wrap
+                "
+            >
+                <li class="nav-item">
+                    <i class="fa fa-tachometer text-lg" aria-hidden="true"></i>
+                    <a class="mr-3" href="index.html"> Home</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-tachometer text-lg" aria-hidden="true"></i>
+                    <a class="mr-3" href="dashboard.html"> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-tachometer text-lg" aria-hidden="true"></i>
+                    <a class="mr-3" href="form.html"> Form</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- end navbar -->
+
+<div class="px-5 py-2 ">
+<div class="card">
+    <div class="flex">
+           <i class="fab fa-product-hunt text-2xl"></i>
+        <h3 class="text-xl font-bold ml-2">Product Detail</h3>
+            <br>
+            <br>
+        </div>
+<form action="" class="w-full">
+<div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4">
+  <div> <label for="Name" class="ml-4 text-xl font-bold">Isbn</label>
+        <input type="text" class="input focus:shadow focus:border-blue-500 focus:bg-white focus:outline-none" placeholder="Isbn">
+    </div>
+  <div> <label for="Name" class="ml-4 text-xl font-bold">Title</label>
+        <input type="text" class="input focus:shadow focus:border-blue-500 focus:bg-white focus:outline-none  " placeholder="Title">
+    </div>  <div> <label for="Name" class="ml-4 text-xl font-bold">Category</label>
+        <input type="text" class="input focus:shadow focus:border-blue-500 focus:bg-white focus:outline-none  " placeholder="Category">
+    </div>
+
+</div>
+      <div class="p-2">
+       <label for="Name" class="ml-4 text-xl font-bold">Description</label>
+       <textarea name="" id="" cols="30" placeholder="Description" rows="5"class="input focus:shadow focus:border-blue-500 focus:bg-white focus:outline-none " ></textarea>
+ 
+   </div>
+
+
+</form>
+<br>
+
+<div class="d-flex">
+    <a href="create-stock-product.html" class="btn-primary rounded-3xl hover:bg-blue-500">Create Stock Product</a>
+    
+</div>
+<br>
+<!-- table -->
+ <table class="" id="dataTable">
+                            <thead>
+          <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+            <th class="px-4 py-3">Isbn</th>
+            <th class="px-4 py-3">Title</th>
+            <th class="px-4 py-3">Category</th>
+            <th class="px-4 py-3">Description</th>
+          </tr>
+        </thead>
+                            <tbody class="bg-white ">
+                                 <tr class="text-gray-700">
+            
+            
+            <td class="px-4 py-3 text-lg font-semibold border">
+             yusuf@gmail.com
+            </td>
+            <td class="px-4 py-3 text-lg font-semibold border">Kota bogor</td>
+            <td class="px-4 py-3 text-lg font-semibold border">Jlan menteng asri</td>
+            <td class="px-4 py-3 text-lg font-semibold border">AII1N2</td>
+
+
+          </tr>
+
+
+                            </tbody>
+                        </table>
+
+</div>
+</div>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+       <script>
+            $(document).ready(function () {
+                $('#dataTable').DataTable();
+
+            });
+            $(document).ready(function() {
+            
+            var table = $('#example').DataTable( {
+                    responsive: true
+                } )
+                .columns.adjust()
+                .responsive.recalc();
+        } );
+        </script>
+    </body>
+</html>

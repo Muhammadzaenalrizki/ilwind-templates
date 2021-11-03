@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+@layer components  {
+.nav-item{
+	@apply w-full sm:w-full lg:w-1/12 h-12 sm:h-12 lg:h-14 items-center  flex 
+          lg:justify-center hover:bg-blue-100 hover:text-blue-600 rounded-full px-3 text-lg;
+}
+.card{
+@apply bg-white w-full shadow-sm rounded-md p-5;
+}
+.input{
+	@apply bg-gray-100 border-2 w-full py-2 rounded-3xl  px-4 border-gray-100 ;
+}
+/*end navbar*/
+
+/*button*/
+.btn-primary{
+	@apply bg-blue-400  px-5 py-3 text-white ;
+}
+.btn-danger{
+	@apply bg-red-400  px-5 py-3 text-white ;
+}
+.warnig{
+	@apply bg-yellow-400  px-5 py-3 text-white ;
+}
+}

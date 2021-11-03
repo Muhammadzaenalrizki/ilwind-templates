@@ -4,11 +4,184 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documensssssst</title>
+    <title>index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+                  <style>
+        
+        /*Overrides for Tailwind CSS */
+        
+        /*Form fields*/
+        .dataTables_wrapper select,
+        .dataTables_wrapper .dataTables_filter input {
+            color: #4a5568;             /*text-gray-700*/
+            padding-left: 1rem;         /*pl-4*/
+            padding-right: 1rem;        /*pl-4*/
+            padding-top: .5rem;         /*pl-2*/
+            padding-bottom: .5rem;      /*pl-2*/
+            line-height: 1.25;          /*leading-tight*/
+            border-width: 2px;          /*border-2*/
+            border-radius: .25rem;      
+            border-color: #edf2f7;      /*border-gray-200*/
+            background-color: #edf2f7;  /*bg-gray-200*/
+        }
+
+        /*Row Hover*/
+        table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+            background-color: #ebf4ff;  /*bg-indigo-100*/
+        }
+        
+        /*Pagination Buttons*/
+        .dataTables_wrapper .dataTables_paginate .paginate_button       {
+            font-weight: 700;               /*font-bold*/
+            border-radius: .25rem;          /*rounded*/
+            border: 1px solid transparent;  /*border border-transparent*/
+        }
+        
+        /*Pagination Buttons - Current selected */
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current   {
+            color: #fff !important;             /*text-white*/
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);    /*shadow*/
+            font-weight: 700;                   /*font-bold*/
+            border-radius: .25rem;              /*rounded*/
+            background: #667eea !important;     /*bg-indigo-500*/
+            border: 1px solid transparent;      /*border border-transparent*/
+        }
+
+        /*Pagination Buttons - Hover */
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover     {
+            color: #fff !important;             /*text-white*/
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);     /*shadow*/
+            font-weight: 700;                   /*font-bold*/
+            border-radius: .25rem;              /*rounded*/
+            background: #667eea !important;     /*bg-indigo-500*/
+            border: 1px solid transparent;      /*border border-transparent*/
+        }
+        
+        /*Add padding to bottom border */
+        table.dataTable.no-footer {
+            border-bottom: 1px solid #e2e8f0;   /*border-b-1 border-gray-300*/
+            margin-top: 0.75em;
+            margin-bottom: 0.75em;
+        }
+        
+        /*Change colour of responsive icon*/
+        table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+            background-color: #667eea !important; /*bg-indigo-500*/
+        }
+        
+      </style>
+      
+
 <script defer src="app.js"></script></head>
-<body class="bg-blue-200">
-    <a href="dashboard.html">Dashboard</a>
+<body class="bg-gray-100 ">
+    <!-- header -->
+    <header class="flex flex-row w-full lg:px-10">
+        <div class="w-1/2 ">
     <img src="img/logo.png" alt="">
-    <!-- <script src="./dist/main.js"></script> -->
+        </div>
+        <div class="w-1/2  flex justify-end items-center ">
+      <h6><b>Hello,</b>Zaenal</h6>
+        </div>
+    </header>
+    <!-- end header -->
+<!-- navbar -->
+
+
+<div class="inline sm:inline md:inline lg:hidden xl:hidden px-3" id="hamburger">
+    <i class="fas fa-bars text-3xl"></i>
+</div>
+<nav class="bg-white shadow-sm lg:px-24 py-1 flex  hidden sm:hidden md:hidden lg:block   xl:block  z-999" id="navbar">
+   <ul class="flex flex-column sm:flex-column md:flex-column lg:flex-row flex-wrap">
+     <li class="nav-item"><i class="fa fa-tachometer text-lg" aria-hidden="true"></i>   <a class="mr-3" href="index.html">  
+        Home</a></li>
+       <li class="nav-item"><i class="fa fa-tachometer text-lg" aria-hidden="true"></i>   <a class="mr-3" href="dashboard.html">  
+        Dashboard</a></li>
+         <li class="nav-item"><i class="fa fa-tachometer text-lg" aria-hidden="true"></i>   <a class="mr-3" href="form.html">  
+        Form</a></li>
+
+   </ul>
+</nav>
+<!-- end navbar -->
+
+<!-- container -->
+<div class="px-5 py-2 ">
+   
+    <div class="card">
+          <div class="flex p-3">
+            <i class="fa fa-users text-2xl" aria-hidden="true"></i>
+        <h3 class="text-2xl font-bold ml-2">List of Customer</h3>
+            <br>
+        </div>
+<hr>
+            <br>
+<a href="form-customer.html" class="btn-primary rounded-xl hover:bg-blue-500">New Customer</a>
+<br>
+<br>
+  <div class="w-full  ">
+            <div class="flex flex-col">
+                <div class="w-full">
+                    <div class=" border-b border-gray-200 ">
+                        <table class="" id="dataTable">
+                            <thead>
+          <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase">
+            <th class="px-4 py-3">Name</th>
+            <th class="px-4 py-3">Phone</th>
+            <th class="px-4 py-3">EMail</th>
+            <th class="px-4 py-3">City</th>
+            <th class="px-4 py-3">Address</th>
+            <th class="px-4 py-3">Post Code</th>
+          </tr>
+        </thead>
+                            <tbody class="bg-white ">
+                                 <tr class="text-gray-700">
+            
+            <td class="px-4 py-3 text-lg font-semibold border">Yusuf</td>
+            <td class="px-4 py-3 text-lg font-semibold border">08982882</td>
+            <td class="px-4 py-3 text-lg font-semibold border">
+             yusuf@gmail.com
+            </td>
+            <td class="px-4 py-3 text-lg font-semibold border">Kota bogor</td>
+            <td class="px-4 py-3 text-lg font-semibold border">Jlan menteng asri</td>
+            <td class="px-4 py-3 text-lg font-semibold border">AII1N2</td>
+
+
+          </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    </div>
+    
+
+</div>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+       <script>
+            $(document).ready(function () {
+                $('#dataTable').DataTable();
+
+            });
+            $(document).ready(function() {
+            
+            var table = $('#example').DataTable( {
+                    responsive: true
+                } )
+                .columns.adjust()
+                .responsive.recalc();
+        } );
+        </script>
 </body>
 </html>
