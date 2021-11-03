@@ -128,35 +128,46 @@
             <div class="flex flex-col">
                 <div class="w-full">
                     <div class=" border-b border-gray-200 ">
-                        <table class="" id="dataTable">
-                            <thead>
-          <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase">
-            <th class="px-4 py-3">Name</th>
-            <th class="px-4 py-3">Phone</th>
-            <th class="px-4 py-3">EMail</th>
-            <th class="px-4 py-3">City</th>
-            <th class="px-4 py-3">Address</th>
-            <th class="px-4 py-3">Post Code</th>
-          </tr>
-        </thead>
-                            <tbody class="bg-white ">
-                                 <tr class="text-gray-700">
-            
-            <td class="px-4 py-3 text-lg font-semibold border">Yusuf</td>
-            <td class="px-4 py-3 text-lg font-semibold border">08982882</td>
-            <td class="px-4 py-3 text-lg font-semibold border">
-             yusuf@gmail.com
-            </td>
-            <td class="px-4 py-3 text-lg font-semibold border">Kota bogor</td>
-            <td class="px-4 py-3 text-lg font-semibold border">Jlan menteng asri</td>
-            <td class="px-4 py-3 text-lg font-semibold border">AII1N2</td>
-
-
-          </tr>
-
-
-                            </tbody>
-                        </table>
+                           <table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+                    <thead>
+                        <tr>
+                            <th data-priority="1">Name</th>
+                            <th data-priority="2">Position</th>
+                            <th data-priority="3">Office</th>
+                            <th data-priority="4">Age</th>
+                            <th data-priority="5">Start date</th>
+                            <th data-priority="6">Salary</th>
+                            <th data-priority="6">Salary</th>
+                            <th data-priority="6">Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                             <td>2011/04/25</td>
+                            <td>$320,800</td>
+                        </tr>
+                        
+                        <!-- Rest of your data (refer to https://datatables.net/examples/server_side/ for server side processing)-->
+                        
+                        <tr>
+                            <td>Donna Snider</td>
+                            <td>Customer Support</td>
+                            <td>New York</td>
+                            <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                             <td>2011/04/25</td>
+                            <td>$320,800</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
                     </div>
                 </div>
             </div>
@@ -169,10 +180,7 @@
 </div>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
        <script>
-            $(document).ready(function () {
-                $('#dataTable').DataTable();
-
-            });
+          
             $(document).ready(function() {
             
             var table = $('#example').DataTable( {
